@@ -34,6 +34,7 @@ defmodule NervesSystemRpiMT7601U.MixProject do
   defp nerves_package do
     [
       type: :system,
+      build_runner: Nerves.Artifact.BuildRunners.Docker,
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
       platform_config: [

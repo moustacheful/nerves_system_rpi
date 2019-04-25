@@ -36,6 +36,9 @@ defmodule NervesSystemRpiMT7601U.MixProject do
       type: :system,
       build_runner: Nerves.Artifact.BuildRunners.Docker,
       build_runner_opts: build_runner_opts(),
+      artifact_sites: [
+        {:github_releases, "moustacheful/#{@app}"}
+      ],
       platform: Nerves.System.BR,
       platform_config: [
         defconfig: "nerves_defconfig"
